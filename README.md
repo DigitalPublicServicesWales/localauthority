@@ -1,42 +1,64 @@
-# Funded childcare content toolkit — interactive prototype
+# Funded childcare for 2-year-olds: content toolkit
 
-A small, self-contained prototype for exploring how local authorities in Wales could adapt a shared content pattern for pages about funded childcare for 2-year-olds.
+**Digital Public Services Wales – working prototype v0.5**
 
-## Run the prototype
 
-Open `index.html` in a modern web browser. No build tools, dependencies or account are required.
+A small static website that helps local authorities adapt a shared content pattern for funded childcare for 2-year-olds.
 
-To publish as a GitHub Pages prototype, upload `index.html` to the root of a repository, then configure **Settings → Pages → Deploy from a branch**, choosing the main branch and root directory. Check your organisation's publishing and branding approvals before making it public.
+## Try it
+
+Open `index.html` in a web browser, or publish it through GitHub Pages. No build step or server is required.
 
 ## What works
 
-- Five linked pages: Home, Content pattern, User needs and evidence, Adapt for your area, Work with us.
-- Three-step guided adaptation journey.
-- Selection of one of the 22 Welsh local authorities.
-- Optional local arrangements and verified content fields.
-- A rules-based draft assembled from user-provided information.
-- Editable draft text, review checklist, copy, text download and print/PDF options.
-- Keyboard-accessible controls and responsive layout.
+- About the pattern and suggested position in a council website
+- User needs: six concise needs mapped to sections of the supplied content pattern, plus scope boundaries and validation questions
+- Local authority setup: council and area names, application and Family Information Service contacts, provider search and application links, processing time, system name, and provider-choice variant
+- Live save of local answers in the browser via localStorage
+- Preview using the supplied content pattern
+- Clear placeholders for missing local information and the as-yet-unsupplied 'provider chosen after applying' copy
+- Text download, copy and print/save as PDF
 
-## Explicit limitations
+## Boundaries
 
-- **No AI model** is connected. The draft generator uses simple local JavaScript rules.
-- **No verified policy, local authority or research source content** is built in. Everything must be checked before publishing.
-- No data is sent to a server or saved between visits. All state lives in the current browser tab.
-- English-only demonstration. A full bilingual version needs Welsh content design, translation and testing.
-- This is not an official Welsh Government website or a live public service.
-- No contact route or feedback service is connected.
-- The project has not been through a formal accessibility audit or security review.
+This is a working prototype, not a published public service. The current supplied content is a working pattern and must be checked against approved scheme guidance before publication. The English pattern only is included; no Welsh translation has been supplied or approved. Local answers remain in the browser, not a shared database. The setup includes processing time and online system name for future content decisions, but these are deliberately *not* inserted into the public-facing page yet because the source pattern does not specify where or how to use them.
 
-## Decisions to test with local authority staff
+Do not enter personal information about families. Do not present this prototype as an officially approved Welsh Government website.
 
-1. Is the shared pattern understandable and useful without the generator?
-2. Are the questions enough to prepare a meaningful local draft?
-3. What facts can staff confidently supply, and what needs policy sign-off?
-4. Does the review page make unverified information obvious enough?
-5. Would adapting an existing page be more useful than generating a new draft?
-6. What output format best fits the local authority publishing process?
+## Suggested feedback workflow
 
-## Suggested next iteration
+Keep one GitHub repository. Use Issues for each proposed improvement, with a screenshot, expected behaviour, who raised it, and whether it affects the shared pattern or a local variation. Use a branch and pull request for each approved change. Tag releases (v0.2, v0.3) and keep a short changelog.
 
-Replace example sections with the team's approved childcare content pattern and evidence, test with two authorities, and then evaluate whether AI improves the quality of adapted drafts beyond structured composition. Add a secure server-side AI endpoint only after governance and security review.
+## Next iteration
+
+1. Review with the content designer: exact copy, place in website hierarchy, provider-choice variants, and what is protected vs locally adaptable.
+2. Test with 2–3 local authorities and record questions and changes.
+3. Add agreed Welsh-language version and bilingual quality checks.
+4. Consider downloadable Word, structured change history and contributions after the journey is validated.
+
+## Visual design and naming (v0.3)
+
+The prototype has a DPSW-inspired publisher header, a clearer service title and interaction styling informed by the GOV.UK Design System (including form fields, focus states, button treatment, content widths and prototype identification). The geometric publisher mark is an **illustrative placeholder**, not the official DPSW logo.
+
+This is **not** a production-ready application of the GOV.WALES Global Experience Language (GEL). Confirm official branding, design system requirements and publishing approval with the relevant Welsh Government teams before public release.
+
+Suggested public-facing name: **Funded childcare for 2-year-olds: content toolkit**. Attribution: **Digital Public Services Wales**, with the context **Welsh Government funded childcare**.
+
+### Feedback workflow
+
+Use GitHub Issues to record a concrete problem, the page or step affected, evidence from a colleague or local authority, and a proposed change. Agree changes to the shared pattern with the content owner before changing public-facing wording.
+
+## User needs (v0.4)
+
+The User needs section contains six **candidate needs inferred from the supplied draft pattern**: understanding the offer, timing, finding a provider, applying, what happens next, and getting help. They are not claimed as research-validated user needs. They should be tested with families and local authorities, and then updated with evidence. This section intentionally limits scope to the page and links to related services instead of duplicating them.
+
+## Changes in v0.5
+
+- Official combined Welsh Government and Digital Public Services Wales logo, referenced from the Welsh Government Digital and Data blog. **The logo loads from an external website:** if external images are blocked or the blog URL changes, the site displays a bilingual text fallback. Before formal publication, get the approved brand asset and host a local copy with permission.
+- DPSW dark teal, white and mint styling, retaining accessible GOV.UK-style forms and focus states. The palette is visually informed by official branding, not a verified brand-token specification.
+- Six user needs presented as three distinct lines: As a…, I need to…, So that I can…
+- Related links to the DPSW Apply service pattern, Service Manual and fundamental user needs.
+- Renamed setup navigation to **Adapt for your local authority**.
+- Fixed **Preview your page** button to use the same explicit client-side navigation as the tabs and save entered values first.
+
+No AI, backend or API connection is used.
