@@ -1,3 +1,5 @@
+> **v0.7.1 fix:** Corrected a start-up error when browser storage is unavailable. The language switch is now also present in the initial HTML. Tested both language directions, the Welsh setup form and preview in a headless browser.
+
 # Funded childcare for 2-year-olds: content toolkit
 
 **Digital Public Services Wales – working prototype v0.7**
